@@ -74,7 +74,7 @@ const Home = () => {
       });
   };
   return (
-    <div>
+    <div className="p-[20px] flex flex-col gap-[20px]">
       <PostCategory open={categoryModal} toggle={toggle} editItem={editItem} />
       <Button variant="outlined" onClick={() => setCategoryModal(true)}>
         Open Modal
@@ -85,7 +85,7 @@ const Home = () => {
             <th className="border">Engish</th>
             <th className="border">Russian</th>
             <th className="border">Images</th>
-            <th className="border">Action</th>
+            <th className="border">Actions</th>
           </tr>
         </thead>
         <tbody>

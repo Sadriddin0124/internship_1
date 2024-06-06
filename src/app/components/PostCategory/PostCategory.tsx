@@ -43,7 +43,7 @@ const PostCategory = ({
     } else {
       editItem?.image_src;
     }
-    if (editItem) {
+    if (editItem?.id) {
       fetch(`${base_url}/categories/${editItem?.id}`, {
         method: "PUT",
         body: formData,
