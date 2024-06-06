@@ -139,7 +139,7 @@ const PostCategory = ({
                 alt="image"
                 width={500}
                 height={500}
-                className="w-[100%] h-[100%] object-cover"
+                className="w-[100%] h-[100%] object-contain"
               />
               <input
                 multiple

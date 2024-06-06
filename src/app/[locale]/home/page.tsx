@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from '@mui/icons-material/Delete';
 import toast from "react-hot-toast";
+import LoadingButton from "@mui/lab/LoadingButton";
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 const Home = () => {
@@ -50,9 +51,11 @@ const Home = () => {
     setCategoryModal(true);
     console.log(editItem);
   };
+  const [loading, setLoading] = React.useState<string | undefined>("");
+
   const deleteCategory = (id: string | undefined) => {
     const token = localStorage.getItem("accessToken");
-
+    setLoading(id)
     fetch(`${base_url}/categories/${id}`, {
       method: "DELETE",
       headers: {
@@ -64,6 +67,7 @@ const Home = () => {
         if (data?.success === true) {
           toast.success(data?.message);
           getData()
+          setLoading("")
         } else {
           toast.error(data?.message);
         }
@@ -82,7 +86,7 @@ const Home = () => {
       <table className="w-[100%] border">
         <thead className=" bg-purple-500 text-white">
           <tr>
-            <th className="border">Engish</th>
+            <th className="border">English</th>
             <th className="border">Russian</th>
             <th className="border">Images</th>
             <th className="border">Actions</th>
@@ -106,9 +110,18 @@ const Home = () => {
                 <Button variant="contained" onClick={() => editCategory(item)}>
                   <EditIcon />
                 </Button>
-                <Button variant="contained" color="error" onClick={() => deleteCategory(item?.id)}>
-                  <DeleteIcon />
-                </Button>
+                <LoadingButton
+                className="py-[10px]"
+                onClick={() => deleteCategory(item?.id)}
+                color="error"
+              size="small"
+              type="submit"
+              endIcon={<DeleteIcon className="text-[24px]"/>}
+              loading={loading === item?.id ? true : false}
+              loadingPosition="end"
+              variant="contained"
+            >
+            </LoadingButton>
               </th>
             </tr>
           ))}
