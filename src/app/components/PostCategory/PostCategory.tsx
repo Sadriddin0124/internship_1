@@ -5,9 +5,12 @@ import Modal from "@mui/material/Modal";
 import { TextField } from "@mui/material";
 import toast from "react-hot-toast";
 import { CategoriesType } from "@/app/types/slider.types";
-
+import LoadingButton from "@mui/lab/LoadingButton";
+import SendIcon from "@mui/icons-material/Send";
+import Image from "next/image";
+import UploadImage from "@/assets/upload.png"
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
-
+const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -18,7 +21,6 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-
 const PostCategory = ({
   open,
   toggle,
@@ -30,10 +32,11 @@ const PostCategory = ({
 }) => {
   const [name_en, setName_en] = React.useState<string>("");
   const [name_ru, setName_ru] = React.useState<string>("");
-  const [image, setImage] = React.useState<File | null>(null);
-
+  const [image, setImage] = React.useState<File | undefined>();
+  const [loading, setLoading] = React.useState(false);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     const token = localStorage.getItem("accessToken");
     const formData = new FormData();
     name_en ? formData.append("name_en", name_en) : editItem?.name_en;
@@ -87,6 +90,20 @@ const PostCategory = ({
         });
     }
   };
+  const [selectedImage, setSelectedImage] = React.useState<
+    string | ArrayBuffer | null
+  >(null);
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] as Blob;
+    const file2 = e.target.files?.[0]
+    const reader = new FileReader();
+    setImage(file2)
+    reader.onload = () => {
+      setSelectedImage(reader.result);
+    };
+
+    reader.readAsDataURL(file);
+  };
   return (
     <div>
       <Modal
@@ -116,19 +133,32 @@ const PostCategory = ({
               onChange={(e) => setName_ru(e.target.value)}
               defaultValue={editItem?.name_ru}
             />
-            <input
-              multiple
-              type="file"
-              accept="image/*"
-              onChange={(e) => {
-                if (e.target.files && e.target.files.length > 0) {
-                  setImage(e.target.files[0]);
-                }
-              }}
-            />
-            <Button variant="outlined" type="submit">
-              Save
-            </Button>
+            <div className="w-[100%] h-[150px] relative cursor-crosshair">
+              <Image
+                src={selectedImage?.toString() ? selectedImage?.toString() : editItem?.image_src ? base_url2 + editItem?.image_src : UploadImage}
+                alt="image"
+                width={500}
+                height={500}
+                className="w-[100%] h-[100%] object-cover"
+              />
+              <input
+                multiple
+                type="file"
+                accept="image/*"
+                onChange={handleImageSelect}
+                className=" absolute w-[100%] h-[100%] top-0 opacity-0 cursor-crosshair"
+              />
+            </div>
+            <LoadingButton
+              size="small"
+              type="submit"
+              endIcon={<SendIcon />}
+              loading={loading}
+              loadingPosition="end"
+              variant="contained"
+            >
+              <span>Send</span>
+            </LoadingButton>
           </form>
         </Box>
       </Modal>

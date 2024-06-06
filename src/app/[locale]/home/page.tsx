@@ -75,9 +75,9 @@ const Home = () => {
   };
   return (
     <div className="p-[20px] flex flex-col gap-[20px]">
-      <PostCategory open={categoryModal} toggle={toggle} editItem={editItem} />
+      <PostCategory open={categoryModal} toggle={toggle} editItem={editItem}/>
       <Button variant="outlined" onClick={() => setCategoryModal(true)}>
-        Open Modal
+        Add Category
       </Button>
       <table className="w-[100%] border">
         <thead className=" bg-purple-500 text-white">
