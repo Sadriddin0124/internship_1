@@ -58,7 +58,7 @@ export default function OutlinedCard() {
               label="Password"
               onChange={(e)=>setPassword(e?.target?.value)}
             />
-            <Button variant="outlined" type="submit">Primary</Button>
+            <Button variant="outlined" type="submit">Login</Button>
           </form>
         </Card>
       </Box>
