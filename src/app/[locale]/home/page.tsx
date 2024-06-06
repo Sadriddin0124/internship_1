@@ -91,9 +91,9 @@ const Home = () => {
         <tbody>
           {categories?.map((item, index) => (
             <tr key={index}>
-              <th>{item?.name_en}</th>
-              <th>{item?.name_ru}</th>
-              <th>
+              <th className="border">{item?.name_en}</th>
+              <th className="border">{item?.name_ru}</th>
+              <th className="border">
                 <Image
                   className="w-[70px] h-[50px]"
                   src={`${base_url2}${item?.image_src}`}
@@ -102,7 +102,7 @@ const Home = () => {
                   height={400}
                 />
               </th>
-              <th>
+              <th className="border">
                 <Button variant="contained" onClick={() => editCategory(item)}>
                   <EditIcon />
                 </Button>
