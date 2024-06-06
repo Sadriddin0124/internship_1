@@ -1,0 +1,261 @@
+{
+  "Index": {
+    "header1": {
+      "title": "Siz yoqtirib qolishingiz aniq bo'lgan shahar:",
+      "name": "Istanbul",
+      "go_button": "Borishni xohlaysizmi?",
+      "population_name": "Aholisi:",
+      "population_num": "44.48M",
+      "square_name": "Hududi:",
+      "square_num": "275.400 KM2",
+      "cost_name": "O'rtacha narx",
+      "cost_num": "$946.000",
+      "learn_more": "Ko'proq bilish..."
+    },
+    "header2": {
+      "title": "Siz yoqtirib qolishingiz aniq bo'lgan shahar:",
+      "name": "Antalya",
+      "go_button": "Borishni xohlaysizmi?",
+      "population_name": "Aholisi:",
+      "population_num": "8.66 M",
+      "square_name": "Hududi:",
+      "square_num": "41.290 KM2",
+      "cost_name": "O'rtacha narx",
+      "cost_num": "$1.100.200",
+      "learn_more": "Ko'proq bilish..."
+    },
+    "header3": {
+      "title": "Siz yoqtirib qolishingiz aniq bo'lgan shahar:",
+      "name": "Dubai",
+      "go_button": "Borishni xohlaysizmi?",
+      "population_name": "Aholisi:",
+      "population_num": "67.41 M",
+      "square_name": "Hududi:",
+      "square_num": "551.500 KM2",
+      "cost_name": "O'rtacha narx",
+      "cost_num": "$425.600",
+      "learn_more": "Ko'proq bilish..."
+    },
+    "header4": {
+      "title": "Siz yoqtirib qolishingiz aniq bo'lgan shahar:",
+      "name": "Sharm El-Sheikh",
+      "go_button": "Borishni xohlaysizmi?",
+      "population_name": "Aholisi:",
+      "population_num": "69.86 M",
+      "square_name": "Hududi:",
+      "square_num": "513.120 KM2",
+      "cost_name": "O'rtacha narx",
+      "cost_num": "$165.450",
+      "learn_more": "Ko'proq bilish..."
+    },
+    "navLink": {
+      "home": "Bosh sahifa",
+      "about": "Biz haqimizda",
+      "tours": "Turlar",
+      "contacts": "Kontaktlar"
+    },
+    "offers": {
+      "title": "Eng Yaxshi Haftalik Takliflarimiz",
+      "subtitle": "Har bir shaharda faqat siz uchun tuzilgan eng yaxshi haftalik takliflarni kashf eting. O'zingizni sarguzashtlar dunyosida his qiling."
+    },
+    "offers1": {
+      "city": "Istanbul",
+      "price": "$420",
+      "subtitle1": "234 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "offers2": {
+      "city": "Dubai",
+      "price": "$700",
+      "subtitle1": "300 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "offers3": {
+      "city": "Antalya",
+      "price": "$999",
+      "subtitle1": "500 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "offers4": {
+      "city": "Sharm El-Sheikh",
+      "price": "$800",
+      "subtitle1": "200 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "offers5": {
+      "city": "AQSH",
+      "price": "",
+      "subtitle1": "434 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "offers6": {
+      "city": "Kanada",
+      "price": "",
+      "subtitle1": "300 buyurtmalar",
+      "subtitle2": "/kishi",
+      "desc_title": "Tur o'z ichiga oladi:",
+      "desc1": " 5 kunlik sayohat > Mehmonxona",
+      "desc2": " Aviabilet",
+      "desc3": " Eng yaxshi manzillar",
+      "button": "Joy Band Qilish"
+    },
+    "destination": {
+      "title" : "Chiptalarni Biz Bilan Arzon Va Oson Toping",
+      "subtitle": "Har bir shaharda eng yaxshi temir yo‘l va aviachipta biletlarini biz bilan toping"
+    },
+    "desti1": {
+      "title": "Temir Yo‘l Biletleri Biz Bilan",
+      "subtitle": "Butun dunyo bo'ylab",
+      "button": "Ko'proq Bilish",
+      "desc": "Temir yo'l orqali biz bilan sarguzashtlarni kashf eting! Baland tog'larni, betakror tabiat manzalarni, qadimiy va navqiron shaharlarni, takrorlanmas landshaflarni biz bilan birga toping. Qiziqarlimi? Biz bilan bog'laning."
+    },
+    "desti2": {
+      "title": "Aviabiletlar Biz Bilan Arzon",
+      "subtitle": "Jahon bo‘ylab Manzillar",
+      "button": "Ko'proq Bilish",
+      "desc": "Eng arzon, qulay, xavfsiz aviabiletlar biz bilan! Bizga bog'laning, biz sizga eng maqbul bo'ladigan aviabilerni topib beramiz"
+    },
+    "countries": {
+      "title" : "Shaharlardan Biriga Hoziroq Tashrif Buyuring",
+      "subtitle": "Har bir shahardagi eng yaxshi takliflarimizni kashf eting, faqat siz uchun. O'zingiz uchun yangi dunyosni oching va misli ko'rilmagan sarguzashtlar ega bo'ling."
+    },
+    "country1": {
+      "title": "Dubai",
+      "subtitle": "Birlashgan Arab Amirliklari",
+      "button": "Ko'proq Bilish...",
+      "desc": "Dubay - Birlashgan Arab Amirliklaridagi shahar va amirlik, hashamatli xaridlar, ultramodern arxitektura va jonli tungi hayot sahnasi bilan mashhur. Balandligi 830 m bo'lgan Burj Xalifa minorasi osmono'par binolar bilan to'ldirilgan osmon chizig'ida hukmronlik qiladi. Uning etagida musiqaga xoreografiya qilingan samolyotlar va chiroqlar bilan jihozlangan Dubay favvorasi joylashgan. Sun'iy orollarda Atlantis, Palm, suv va dengiz hayvonlari bog'lari joylashgan kurort joylashgan.",
+      "people": " 8.66 mln kishi",
+      "square": "41.290 km2",
+      "price": "$1.100.200",
+      "footer": "Qiziqarlimi? "
+    },
+    "country2": {
+      "title": "Antalya",
+      "subtitle": "Turkiya",
+      "button": "Ko'proq Bilish...",
+      "desc": "Antaliya Turkiyaning eng tez rivojlanayotgan shahri bo'lib, butun dunyodan kelgan sayyohlar uning ajoyib plyajlari va an'anaviy turk madaniyatining ajoyib aralashmasini kashf qilmoqdalar. Bolalarga Aqua Land (suvli slaydni yaxshi ko'radiganlar orzusi) va Dolphin Land (delfinlar, dengiz sherlari va oq kitlarning uyi) o'rin olgan Beach Park yoqadi. Eski shahar markazini o'rganing va Hadrian darvozasini ko'ring.",
+      "people": " 44.48 mln kishi",
+      "square": "275.400 km2",
+      "price": "$946.000",
+      "footer": "Qiziqarlimi? "
+    },
+    "country3": {
+      "title": "Sharm El-Sheikh",
+      "subtitle": "Misr",
+      "button": "Ko'proq Bilish...",
+      "desc": "Sharm El Sheikh - Sinay yarim orolidagi sayyohlik markazi bo'lib, unda dunyodagi eng yaxshi sho'ng'in joylari mavjud. Sharm shahrini butunlay boshqa darajaga olib chiqqan Ras Muhammad milliy bog'ining suv osti mo''jizalari. Shaharda Qizil dengiz tubidagi parallel dengiz hayotini kashf qilish uchun dunyoning turli burchaklaridan ilg'or va rekreatsion g'avvoslarni jalb qiladigan sho'ng'in va kema halokat joylari mavjud.",
+      "people": " 67.41 mln kishi",
+      "square": "551.500 km2",
+      "price": " $425.600",
+      "footer": "Qiziqarlimi? "
+    },
+    "country4": {
+      "title": "Istanbul",
+      "subtitle": "Turkey",
+      "button": "Ko'proq Bilish...",
+      "desc": "Istanbul Turkiyaning eng gavjum shahri va uning madaniy, iqtisodiy va tarixiy markazidir. U Turkiyaning shimoli-g'arbiy qismida joylashgan bo'lib, Marmara va Qora dengizni bog'laydigan Bosfor bo'g'ozi orqali Yevropa va Osiyo tomoniga bo'linadi. Bu ikki qit'ada joylashgan dunyodagi yagona shahar.",
+      "people": " 67.41 mln kishi",
+      "square": "551.500 km2",
+      "price": " $425.600",
+      "footer": "Qiziqarlimi? "
+    },
+    "locations": {
+      "title": "Eng Yaxshi Manzillar",
+      "subtitle": "Har bir shahardagi eng yaxshi takliflarimizni kashf eting, faqat siz uchun. O'zingiz uchun yangi dunyosni oching va misli ko'rilmagan sarguzashtlar ega bo'ling."
+    },
+    "city1": {
+      "name": "Dubai",
+      "population": "Aholisi: 2M"
+    },
+    "city2": {
+      "name": "Antalya",
+      "population": "Aholisi: 3.5M"
+    },
+    "city3": {
+      "name": "Istanbul",
+      "population": "Aholisi: 4.1M"
+    },
+    "city4": {
+      "name": "Sharm El-Sheikh",
+      "population": "Aholisi: 4M"
+    },
+    "city5": {
+      "name": "Parij",
+      "population": "Aholisi: 3M"
+    },
+    "contacts" : {
+      "top": "O'zingiz yoqtirganingizni tanlang",
+      "title": "O'z joyingizni band qiling",
+      "btn": "Ko'proq Bilish..."
+    },
+    "contact1": {
+      "title": "Telefon raqam",
+      "desc": "+998 99 299 99 96"
+    },
+    "contact2": {
+      "title": "Bizga email orqali bog'laning",
+      "desc": "zamonbiznestour@mail.ru"
+    },
+    "contact3": {
+      "title": "Ofisimizga tashrif buyuring",
+      "desc": "15/25, Chilanzar - 9, Tashkent city"
+    },
+    "reservation": {
+      "title": "O'z joyingizni band qiling",
+      "name": "Ismingiz",
+      "phone": "Telefon raqamingiz",
+      "guests": "Necha kishisiz",
+      "date": "Uchish sanasi",
+      "destination": "Manzilingizni tanlang",
+      "visa": "Visa turini tanlangt",
+      "btn": "Band Qilish",
+      "city1": "Antalya",
+      "city2": "Istanbul",
+      "city3": "Dubai",
+      "city4": "Sharm El-Sheikh",
+      "city5": "Kuala Lumpur",
+      "city6": "Canada",
+      "city7": "England",
+      "country": "Choose Your Country",
+      "country1": "USA",
+      "country2": "Europe",
+      "country3": "England",
+      "country4": "Japan",
+      "country5": "Oman",
+      "country6": "Saudi Arabia",
+      "country7": "India",
+      "country8": "China"
+    },
+    "footer": {
+      "title": "SAYOHAT QILISHNI XOHLAYSIZMI?",
+      "subtitle": "Unda biz bilan hoziroq bog'laning",
+      "btn": "Bog'lanish",
+      "bottom": "Copyright © 2024 Zamon Business Tour. All rights reserved."
+    }
+  }
+}

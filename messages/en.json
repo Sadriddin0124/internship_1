@@ -1,0 +1,261 @@
+{
+  "Index": {
+    "header1": {
+      "title": "Take a Glimpse Into The Beautiful City Of:",
+      "name": "Istanbul",
+      "go_button": "Go There",
+      "population_name": "Population:",
+      "population_num": "44.48M",
+      "square_name": "Territory:",
+      "square_num": "275.400 KM2",
+      "cost_name": "AVG Price",
+      "cost_num": "$946.000",
+      "learn_more": "Learn more..."
+    },
+    "header2": {
+      "title": "Take a Glimpse Into The Beautiful City Of:",
+      "name": "Antalya",
+      "go_button": "Go There",
+      "population_name": "Population:",
+      "population_num": "8.66 M",
+      "square_name": "Territory:",
+      "square_num": "41.290 KM2",
+      "cost_name": "AVG Price",
+      "cost_num": "$1.100.200",
+      "learn_more": "Learn more..."
+    },
+    "header3": {
+      "title": "Take a Glimpse Into The Beautiful City Of:",
+      "name": "Istanbul",
+      "go_button": "Go There",
+      "population_name": "Population:",
+      "population_num": "67.41 M",
+      "square_name": "Territory:",
+      "square_num": "551.500 KM2",
+      "cost_name": "AVG Price",
+      "cost_num": "$425.600",
+      "learn_more": "Learn more..."
+    },
+    "header4": {
+      "title": "Take a Glimpse Into The Beautiful City Of:",
+      "name": "Istanbul",
+      "go_button": "Go There",
+      "population_name": "Population:",
+      "population_num": "69.86 M",
+      "square_name": "Territory:",
+      "square_num": "513.120 KM2",
+      "cost_name": "AVG Price",
+      "cost_num": "$165.450",
+      "learn_more": "Learn more..."
+    },
+    "navLink": {
+      "home": "Home",
+      "about": "About",
+      "tours": "Tours",
+      "contacts": "Contacts"
+    },
+    "offers": {
+      "title": "Best Weekly Offers In Each City",
+      "subtitle": "Discover the best weekly offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+    },
+    "offers1": {
+      "city": "Istanbul",
+      "price": "$420",
+      "subtitle1": "234 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "offers2": {
+      "city": "Dubai",
+      "price": "$700",
+      "subtitle1": "300 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "offers3": {
+      "city": "Antalya",
+      "price": "$999",
+      "subtitle1": "500 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "offers4": {
+      "city": "Sharm El-Sheikh",
+      "price": "$800",
+      "subtitle1": "200 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "offers5": {
+      "city": "USA",
+      "price": "",
+      "subtitle1": "400 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "offers6": {
+      "city": "Canada",
+      "price": "",
+      "subtitle1": "345 Check Ins",
+      "subtitle2": "/person",
+      "desc_title": "Deal includes:",
+      "desc1": " 5 Days Trip > Hotel Included",
+      "desc2": " Airplane Bill Included",
+      "desc3": " Daily Places Visit",
+      "button": "Make A Reservation"
+    },
+    "destination": {
+      "title" : "Explore Destinations With Ease",
+      "subtitle": "Find the best deals on railway and airplane tickets in each city, carefully selected for you."
+    },
+    "desti1": {
+      "title": "Cheap Railway Tickets With Us",
+      "subtitle": "Whole world",
+      "button": "Explore More",
+      "desc": "Embark on a railway adventure and explore destinations worldwide. Whether it's the picturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique and comfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, all accessible through our extensive railway network."
+    },
+    "desti2": {
+      "title": "Discover Exciting Air Travel Deals",
+      "subtitle": "Global Destinations",
+      "button": "Explore More",
+      "desc": "Embark on an airborne adventure and explore destinations worldwide. Whether it's the breathtaking landscapes, vibrant cities, or cultural treasures, our airline services provide a convenient and exhilarating way to navigate the globe. Immerse yourself in the richness of diverse cultures, all easily accessible through our extensive air travel network."
+    },
+    "countries": {
+      "title" : "Visit One Of Our Countries Now",
+      "subtitle": "Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+    },
+    "country1": {
+      "title": "Dubai",
+      "subtitle": "United Arab Emirates",
+      "button": "Explore More",
+      "desc": "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.",
+      "people": "8.66 Mil People",
+      "square": "41.290 km2",
+      "price": "$1.100.200",
+      "footer": "Need Directions ? "
+    },
+    "country2": {
+      "title": "Antalya",
+      "subtitle": "Turkey",
+      "button": "Explore More",
+      "desc": "Antalya is the fastest-growing city in Turkey, and tourists from around the world are discovering its fabulous mix of great beaches and traditional Turkish culture. Kids will love the Beach Park, which features Aqua Land (a waterslide-fanatic's dream) and Dolphin Land (home to dolphins, sea lions and white whales). Make sure to explore the old town center and to see Hadrian's Gate.",
+      "people": "44.48 Mil People",
+      "square": " 275.400 km2",
+      "price": "$946.000",
+      "footer": "Need Directions ? "
+    },
+    "country3": {
+      "title": "Sharm El-Sheikh",
+      "subtitle": "Egypt",
+      "button": "Explore More",
+      "desc": "Sharm El Sheikh is the center of tourism action in Sinai Peninsula and it has the world top diving sites. Specially the underwater wonders of Ras Mohammed national park that took Sharm city to whole different level. The city has diving and shipwreck sites that attract both advanced and recreational divers from around the world to discover the un parallel marine life deep down the red sea.",
+      "people": "67.41 Mil People",
+      "square": "551.500 km2",
+      "price": " $425.600",
+      "footer": "Need Directions ? "
+    },
+    "country4": {
+      "title": "Istanbul",
+      "subtitle": "Turkey",
+      "button": "Explore More",
+      "desc": "Istanbul is the most populous city in Turkey and its cultural, economic and historic center. It is located in north-western part of Turkey, divided into European and Asian side by Bosphorus, which connects the Sea of Marmara and Black Sea. It is the only city in the world that sits on two continents.",
+      "people": "67.41 Mil People",
+      "square": "551.500 km2",
+      "price": " $425.600",
+      "footer": "Need Directions ? "
+    },
+    "locations": {
+      "title": "Best Locations",
+      "subtitle": "Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+    },
+    "city1": {
+      "name": "Dubai",
+      "population": "Population: 2M"
+    },
+    "city2": {
+      "name": "Antalya",
+      "population": "Population: 3.5M"
+    },
+    "city3": {
+      "name": "Istanbul",
+      "population": "Population: 4.1M"
+    },
+    "city4": {
+      "name": "Sharm El-Sheikh",
+      "population": "Population: 4M"
+    },
+    "city5": {
+      "name": "Paris",
+      "population": "Population: 3M"
+    },
+    "contacts" : {
+      "top": "Book Prefered Deal Here",
+      "title": "Make Your Reservation",
+      "btn": "Discover More"
+    },
+    "contact1": {
+      "title": "Make a Phone Call",
+      "desc": "+998 99 299 99 96"
+    },
+    "contact2": {
+      "title": "Contact Us via Email",
+      "desc": "zamonbiznestour@mail.ru"
+    },
+    "contact3": {
+      "title": "Visit Our Offices",
+      "desc": "15/25, Chilanzar - 9, Tashkent city"
+    },
+    "reservation": {
+      "title": "Make Your Reservation Through This Form",
+      "name": "Your Name",
+      "phone": "Your Phone Number",
+      "guests": "Number Of Guests",
+      "date": "Check In Date",
+      "destination": "Choose Your Destination",
+      "visa": "Choose Your Visa Support",
+      "btn": "Make Your Reservation Now",
+      "city1": "Antalya",
+      "city2": "Istanbul",
+      "city3": "Dubai",
+      "city4": "Sharm El-Sheikh",
+      "city5": "Kuala Lumpur",
+      "city6": "Canada",
+      "city7": "England",
+      "country": "Choose Your Country",
+      "country1": "USA",
+      "country2": "Europe",
+      "country3": "England",
+      "country4": "Japan",
+      "country5": "Oman",
+      "country6": "Saudi Arabia",
+      "country7": "India",
+      "country8": "China"
+    },
+    "footer": {
+      "title": "ARE YOU LOOKING TO TRAVEL ?",
+      "subtitle": "Make A Reservation By Clicking The Button",
+      "btn": "Book Yours Now",
+      "bottom": "Copyright © 2024 Zamon Business Tour. All rights reserved."
+    }
+  }
+}
