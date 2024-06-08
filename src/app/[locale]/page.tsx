@@ -28,7 +28,7 @@ export default function OutlinedCard() {
       localStorage.setItem("accessToken", data?.data?.tokens?.accessToken?.token);
       if (data?.success === true) {
         toast.success(data?.message)
-        router.push(`/${pathname}/home`)
+        router.push(`/${pathname}/home`)        
       }else {
         toast.error(data?.message)
       }

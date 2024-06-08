@@ -9,6 +9,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import SendIcon from "@mui/icons-material/Send";
 import Image from "next/image";
 import UploadImage from "@/assets/upload.png"
+import { getCategories } from "@/app/[locale]/actions/actions";
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 const style = {
@@ -25,15 +26,21 @@ const PostCategory = ({
   open,
   toggle,
   editItem,
+  setCategory
 }: {
   open: boolean;
   toggle: () => void;
   editItem: CategoriesType | undefined;
+  setCategory: React.Dispatch<React.SetStateAction<CategoriesType[]>>
 }) => {
   const [name_en, setName_en] = React.useState<string>("");
   const [name_ru, setName_ru] = React.useState<string>("");
   const [image, setImage] = React.useState<File | undefined>();
   const [loading, setLoading] = React.useState(false);
+  const getCategory = async () => {
+    const res = await getCategories()
+    setCategory(res?.data?.data)
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -58,7 +65,10 @@ const PostCategory = ({
         .then((data) => {
           if (data?.success === true) {
             toast.success(data?.message);
-            window.location.reload();
+            getCategory()
+            toggle()
+            setSelectedImage(null)
+            setLoading(false)
           } else {
             toast.error(data?.message);
           }
@@ -79,7 +89,10 @@ const PostCategory = ({
         .then((data) => {
           if (data?.success === true) {
             toast.success(data?.message);
-            window.location.reload();
+            getCategory()
+            toggle()
+            setSelectedImage(null)
+            setLoading(false)
           } else {
             toast.error(data?.message);
           }
@@ -113,6 +126,7 @@ const PostCategory = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <h1 className="text-[24px] text-center">{editItem?.id ? "Edit category" : "Add category"}</h1>
           <form
             className="flex flex-col items-center gap-[20px]"
             onSubmit={handleSubmit}
@@ -142,6 +156,7 @@ const PostCategory = ({
                 className="w-[100%] h-[100%] object-contain"
               />
               <input
+              required={editItem?.id ? false : true}
                 multiple
                 type="file"
                 accept="image/*"
@@ -149,6 +164,8 @@ const PostCategory = ({
                 className=" absolute w-[100%] h-[100%] top-0 opacity-0 cursor-crosshair"
               />
             </div>
+            <div className="flex gap-[10px]">
+            <Button variant="outlined" onClick={toggle}>cancel</Button>
             <LoadingButton
               size="small"
               type="submit"
@@ -156,9 +173,10 @@ const PostCategory = ({
               loading={loading}
               loadingPosition="end"
               variant="contained"
-            >
+              >
               <span>Send</span>
             </LoadingButton>
+              </div>
           </form>
         </Box>
       </Modal>
