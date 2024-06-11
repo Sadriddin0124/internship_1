@@ -24,3 +24,10 @@ export interface LocationsType {
     image_src?: ReactNode,
     created_at: string
 }
+
+export interface BrandsType {
+    id?: string;
+    title: string
+    image_src?: ReactNode,
+    created_at: string
+}
