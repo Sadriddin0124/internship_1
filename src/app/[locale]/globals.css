@@ -6,39 +6,7 @@
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-/* slick carousel styles */
-.slick-slide {
-  margin: 0 10px;
-}
 
-.slick-list {
-  margin: 0 -10px;
-}
-
-.slick-prev, .slick-next {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-* {
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 700px) {
-  .slide__item {
-    width: 70% !important;
-    margin: 0 15% !important;
-  }
-}
-
-@media (max-width: 500px)  {
-  .slide__item {
-    width: 100% !important;
-    margin: 0 !important;
-  }
+.bg_main {
+  background: #1976d2;
 }

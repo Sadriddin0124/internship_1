@@ -1,6 +1,6 @@
 "use client";
 import PostCategory from "@/app/components/PostCategory/PostCategory";
-import { CategoriesType } from "@/app/types/slider.types";
+import { CategoriesType } from "@/app/types/types";
 import { Button } from "@mui/material";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -9,11 +9,11 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import LoadingButton from "@mui/lab/LoadingButton";
 import DeleteCategory from "@/app/components/DeleteCategory/DeleteCategory";
-import { getCategories } from "../actions/actions";
+import { getCategories } from "../../actions/category_actions";
 import Navbar from "@/app/components/Navbar/Navbar";
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
-const Home = () => {
+const Category = () => {
   const pathname = usePathname();
   const pathname2 = usePathname().split("/")[1];
   const router = useRouter();
@@ -26,7 +26,7 @@ const Home = () => {
   });
   useEffect(() => {
     let accessToken = localStorage.getItem("accessToken");
-    if (!accessToken) {
+    if (!accessToken || accessToken?.length < 50) {
       router.push("/" + pathname2);
     } else {
       router.push(pathname);
@@ -63,8 +63,8 @@ const Home = () => {
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
   const [deleteID, setDeleteID] = useState<string | undefined>("");
   return (
-    <div className="flex flex-col ">
-      <Navbar />
+    <div className="flex flex-col pt-[40px]">
+      <Navbar title={pathname.slice(4)}/>
       <div className="p-[20px] flex flex-col items-start gap-[20px]">
         <DeleteCategory
           open={deleteModal}
@@ -79,11 +79,11 @@ const Home = () => {
           editItem={editItem}
           setCategory={setCategories}
         />
-        <Button variant="outlined" onClick={() => setCategoryModal(true)}>
+        <Button variant="contained" onClick={() => setCategoryModal(true)}>
           Add Category
         </Button>
         <table className="w-[100%] border">
-          <thead className=" bg-purple-500 text-white">
+          <thead className=" bg_main text-white">
             <tr>
               <th className="border py-[10px]">T/R</th>
               <th className="border py-[10px]">English</th>
@@ -134,4 +134,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Category;

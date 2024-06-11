@@ -4,12 +4,12 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { TextField } from "@mui/material";
 import toast from "react-hot-toast";
-import { CategoriesType } from "@/app/types/types";
+import { CitiesType } from "@/app/types/types";
 import LoadingButton from "@mui/lab/LoadingButton";
 import SendIcon from "@mui/icons-material/Send";
 import Image from "next/image";
 import UploadImage from "@/assets/upload.png"
-import { getCategories } from "@/app/actions/category_actions";
+import { getLocation, postLocation, updateLocation } from "@/app/actions/locations_action";
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 const style = {
@@ -22,85 +22,52 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const PostCategory = ({
+const AddLocation = ({
   open,
   toggle,
   editItem,
-  setCategory
+  setLocation
 }: {
   open: boolean;
   toggle: () => void;
-  editItem: CategoriesType | undefined;
-  setCategory: React.Dispatch<React.SetStateAction<CategoriesType[]>>
+  editItem: CitiesType | undefined;
+  setLocation: React.Dispatch<React.SetStateAction<CitiesType[]>>
 }) => {
-  const [name_en, setName_en] = React.useState<string>("");
-  const [name_ru, setName_ru] = React.useState<string>("");
+  const [name, setName] = React.useState<string>("");
+  const [text, setText] = React.useState<string>("");
   const [image, setImage] = React.useState<File | undefined>();
   const [loading, setLoading] = React.useState(false);
-  const getCategory = async () => {
-    const res = await getCategories()
-    setCategory(res?.data?.data)
+  const getCity = async () => {
+    const res = await getLocation()
+    setLocation(res?.data)
   }
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    const token = localStorage.getItem("accessToken");
     const formData = new FormData();
-    name_en ? formData.append("name_en", name_en) : editItem?.name_en;
-    name_ru ? formData.append("name_ru", name_ru) : editItem?.name_ru;
+    name ? formData.append("name", name) : editItem?.name;
+    name ? formData.append("text", text) : editItem?.text;
     if (image) {
       formData.append("images", image);
     } else {
       editItem?.image_src;
     }
     if (editItem?.id) {
-      fetch(`${base_url}/categories/${editItem?.id}`, {
-        method: "PUT",
-        body: formData,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.success === true) {
-            toast.success(data?.message);
-            getCategory()
-            toggle()
-            setSelectedImage(null)
+        const res = await updateLocation(editItem?.id, formData)
+        if (res?.success === true) {
+            toast.success(res?.message)
             setLoading(false)
-          } else {
-            toast.error(data?.message);
-          }
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-      fetch(`${base_url}/categories`, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data?.success === true) {
-            toast.success(data?.message);
-            getCategory()
             toggle()
-            setSelectedImage(null)
+            getCity()
+        }
+    }else {
+        const res = await postLocation(formData)
+        if (res?.success === true) {
+            toast.success(res?.message)
             setLoading(false)
-          } else {
-            toast.error(data?.message);
-          }
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+            toggle()
+            getCity()
+        }
     }
   };
   const [selectedImage, setSelectedImage] = React.useState<
@@ -114,7 +81,6 @@ const PostCategory = ({
     reader.onload = () => {
       setSelectedImage(reader.result);
     };
-
     reader.readAsDataURL(file);
   };
   return (
@@ -134,18 +100,18 @@ const PostCategory = ({
             <TextField
               id="standard-basic"
               variant="standard"
-              label="Name_En"
+              label="Name"
               className="w-[100%]"
-              onChange={(e) => setName_en(e.target.value)}
-              defaultValue={editItem?.name_en}
+              onChange={(e) => setName(e.target.value)}
+              defaultValue={editItem?.name}
             />
             <TextField
               id="standard-basic"
               variant="standard"
-              label="Name_Ru"
+              label="Text"
               className="w-[100%]"
-              onChange={(e) => setName_ru(e.target.value)}
-              defaultValue={editItem?.name_ru}
+              onChange={(e) => setText(e.target.value)}
+              defaultValue={editItem?.text}
             />
             <div className="w-[100%] h-[150px] relative cursor-crosshair">
               <Image
@@ -184,4 +150,4 @@ const PostCategory = ({
   );
 };
 
-export default PostCategory;
+export default AddLocation;
