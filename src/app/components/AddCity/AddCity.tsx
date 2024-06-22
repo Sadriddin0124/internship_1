@@ -93,7 +93,7 @@ const AddCity = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h1 className="text-[24px] text-center">{editItem?.id ? "Edit category" : "Add category"}</h1>
+          <h1 className="text-[24px] text-center">{editItem?.id ? "Edit City" : "Add City"}</h1>
           <form
             className="flex flex-col items-center gap-[20px]"
             onSubmit={handleSubmit}

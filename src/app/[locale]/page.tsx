@@ -54,23 +54,25 @@ export default function OutlinedCard() {
         height={1000}
         className=" absolute w-[100%] h-[100%] object-cover z-[-1]"
       />
-      <div className="px-[20px] py-[50px] flex flex-col items-center gap-[10px] bg-[#ffffff25] w-[400px] min-h-[200px] backdrop-blur-lg">
-        <h1 className="text-[30px] text-white">Login</h1>
+      <div className="px-[20px] py-[50px] flex rounded-2xl overflow-hidden border-2 flex-col items-center gap-[10px] bg-[#ffffff61] w-[400px] min-h-[200px] backdrop-blur-md">
+        <h1 className="text-[30px]">Login</h1>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center gap-[20px]"
+          className="flex flex-col items-center gap-[20px] w-[100%]"
         >
           <TextField
             id="standard-basic"
             variant="standard"
             label="Phone number"
             onChange={(e) => setNumber(e?.target?.value)}
-          />
+            className="w-[80%]"
+            />
           <TextField
             id="standard-basic"
             variant="standard"
             label="Password"
             onChange={(e) => setPassword(e?.target?.value)}
+            className="w-[80%]"
           />
           <Button variant="contained" type="submit">
             Login

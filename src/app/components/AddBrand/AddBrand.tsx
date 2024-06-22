@@ -4,12 +4,12 @@ import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { TextField } from "@mui/material";
 import toast from "react-hot-toast";
-import { CitiesType } from "@/app/types/types";
+import { BrandsType } from "@/app/types/types";
 import LoadingButton from "@mui/lab/LoadingButton";
 import SendIcon from "@mui/icons-material/Send";
 import Image from "next/image";
 import UploadImage from "@/assets/upload.png"
-import { getLocation, postLocation, updateLocation } from "@/app/actions/locations_action";
+import { getBrand, postBrand, updateBrand } from "@/app/actions/brands_action";
 const base_url = "https://autoapi.dezinfeksiyatashkent.uz/api";
 const base_url2 = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 const style = {
@@ -22,51 +22,50 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const AddLocation = ({
+const AddBrand = ({
   open,
   toggle,
   editItem,
-  setLocation
+  setBrands
 }: {
   open: boolean;
   toggle: () => void;
-  editItem: CitiesType | undefined;
-  setLocation: React.Dispatch<React.SetStateAction<CitiesType[]>>
+  editItem: BrandsType | undefined;
+  setBrands: React.Dispatch<React.SetStateAction<BrandsType[]>>
 }) => {
-  const [name, setName] = React.useState<string>("");
-  const [text, setText] = React.useState<string>("");
+  const [title, setTitle] = React.useState<string>("");
   const [image, setImage] = React.useState<File | undefined>();
   const [loading, setLoading] = React.useState(false);
-  const getCity = async () => {
-    const res = await getLocation()
-    setLocation(res?.data)
+  const getBrands = async () => {
+    const res = await getBrand()
+    setBrands(res?.data)
   }
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData();
-    name ? formData.append("name", name) : editItem?.name;
-    name ? formData.append("text", text) : editItem?.text;
+    title ? formData.append("title", title) : editItem?.title;
     if (image) {
       formData.append("images", image);
     } else {
       editItem?.image_src;
     }
     if (editItem?.id) {
-        const res = await updateLocation(editItem?.id, formData)
+        const res = await updateBrand(editItem?.id, formData)
+        console.log(res);
         if (res?.success === true) {
             toast.success(res?.message)
             setLoading(false)
             toggle()
-            getCity()
+            getBrands()
         }
     }else {
-        const res = await postLocation(formData)
+        const res = await postBrand(formData)
         if (res?.success === true) {
             toast.success(res?.message)
             setLoading(false)
             toggle()
-            getCity()
+            getBrands()
         }
     }
   };
@@ -92,7 +91,7 @@ const AddLocation = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h1 className="text-[24px] text-center">{editItem?.id ? "Edit Location" : "Add Location"}</h1>
+          <h1 className="text-[24px] text-center">{editItem?.id ? "Edit Brand" : "Add Brand"}</h1>
           <form
             className="flex flex-col items-center gap-[20px]"
             onSubmit={handleSubmit}
@@ -102,16 +101,8 @@ const AddLocation = ({
               variant="standard"
               label="Name"
               className="w-[100%]"
-              onChange={(e) => setName(e.target.value)}
-              defaultValue={editItem?.name}
-            />
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              label="Text"
-              className="w-[100%]"
-              onChange={(e) => setText(e.target.value)}
-              defaultValue={editItem?.text}
+              onChange={(e) => setTitle(e.target.value)}
+              defaultValue={editItem?.title}
             />
             <div className="w-[100%] h-[150px] relative cursor-crosshair">
               <Image
@@ -150,4 +141,4 @@ const AddLocation = ({
   );
 };
 
-export default AddLocation;
+export default AddBrand;
